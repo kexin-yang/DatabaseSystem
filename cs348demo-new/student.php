@@ -11,7 +11,7 @@
 
 <div class="container" id="main-content">
 	<h2>Student Log In</h2>
-		<form>
+		<form action="student-login.php">
 		  <div class="form-group">
 		    <label for="exampleInputId1">Student ID</label>
 		    <input type="text" class="form-control" id="exampleInputId1" aria-describedby="emailHelp" placeholder="Enter student ID">

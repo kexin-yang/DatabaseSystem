@@ -11,7 +11,7 @@
 
 <div class="container" id="main-content">
 	<h2>Employer Log In</h2>
-		<form>
+		<form action="employer-login.php">
 		  <div class="form-group">
 		    <label for="exampleInputId1">Organization name</label>
 		    <input type="text" class="form-control" id="exampleInputId1" aria-describedby="emailHelp" placeholder="Enter organization name">

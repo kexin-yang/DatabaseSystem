@@ -22,7 +22,7 @@
                 <th scope="col">Position Type</th>
                 <th scope="col">Internal Status</th>
                 <th scope="col">App Deadline</th>
-                <!-- <th scope="col">Description</td> -->
+                <!-- <th scope="col">Description</td> Hiding description for now because it is too long -->
             </tr>
         </thead>
         <tbody>
@@ -48,7 +48,7 @@
 
 			// Create connection
 			//for testing on localhost:8080
-			//$conn = new mysqli("127.0.0.1", $username, $password, $dbname,3306);
+			//$conn = new mysqli("127.0.0.1", $username, $password, $dbname, 3306);
 
 			//for deployment 
 			$conn = new mysqli(null, $username, $password, $dbname, $dbport, $dbsocket);
@@ -58,8 +58,6 @@
 			if ($conn->connect_error) {
 			    die("Connection failed: " . $conn->connect_error);
 			}
-			// echo "\nConnected successfully\n";
-
 
 			$sql = "SELECT * FROM Job";
 
