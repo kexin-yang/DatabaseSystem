@@ -1,0 +1,36 @@
+CREATE DATABASE Workify;
+ 
+USE Workify;
+ 
+CREATE TABLE Job (
+JID int,
+JobTitle VARCHAR(255), 
+Organization VARCHAR(255),
+Division VARCHAR(255),
+PositionType VARCHAR(255),
+InternalStatus VARCHAR(255),
+AppDeadline VARCHAR(255),
+Description VARCHAR(255),
+PRIMARY KEY(JID));
+
+CREATE TABLE Company (
+Name VARCHAR(255),
+Rating float,
+Password VARCHAR(255),
+Location VARCHAR(255),
+PRIMARY KEY(Name));
+
+CREATE TABLE Applicant (
+SID int,
+Name VARCHAR(255),
+Major VARCHAR(255),
+Password VARCHAR(255),
+ContactInformation VARCHAR(255),
+PRIMARY KEY(SID));
+
+CREATE TABLE Applied (
+SID int,
+JID int,
+PRIMARY KEY(SID, JID));
+ 
+INSERT INTO Job (JID, JobTitle, Organization, Division, PositionType, InternalStatus, AppDeadline, Description) values (123456, "Software Engineer", "Apple Inc", "Divisional Office", "Full-time", "Open for Applications", "Feb 5, 2020", "Develop information systems by designing, developing, and installing software solutions.");

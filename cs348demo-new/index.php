@@ -6,12 +6,12 @@ require __DIR__ . '/env.php';
 use Google\Cloud\Storage\StorageClient;
 
 $app = array();
-$app['bucket_name'] = "cs348demo.appspot.com";
+$app['bucket_name'] = "cs348demo-266020.appspot.com";
 $app['mysql_user'] =  $mysql_user;
 $app['mysql_password'] = $mysql_password;
-$app['mysql_dbname'] = "guestbook";
+$app['mysql_dbname'] = "Workify";
 $app['project_id'] = getenv('GCLOUD_PROJECT');
-$app['connection_name'] = "/cloudsql/cs348demo-266020:us-central1:cs348demo-db";
+$app['connection_name'] = "/cloudsql/cs348demo-266020:us-central1:workify-db";
 
 
 
@@ -37,13 +37,13 @@ if ($conn->connect_error) {
 echo "\nConnected successfully\n";
 
 
-$sql = "SELECT * FROM entries";
+$sql = "SELECT * FROM Job";
 
 $counter  = 0;
 
 if ($result = $conn -> query($sql)) {
   while ($row = $result -> fetch_row()) {
-        printf ("%s (%s)\n", $row[0], $row[1]);
+        printf ("Job Title: %s Organization: %s\n\n", $row[1], $row[2]);
         $counter = $counter + 1;
   }
   $result -> free_result();
