@@ -61,6 +61,8 @@ data class Job(
 data class Company(
     var Organization: String = "",
     var Rating: Float = 0.0F
+//    var Password: String = "Password",
+//    var Country: String = "Canada"
 )
 
 //App Status
