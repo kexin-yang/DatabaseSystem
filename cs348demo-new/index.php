@@ -9,33 +9,20 @@
 <?php include("includes/design-top.php");?>
 <?php include("includes/navigation.php");?>
 
-<?php
-// $counter  = 0;
-
-// if () {
-//   while ($row = $result -> fetch_row()) {
-//         printf ("Job Title: %s Organization: %s\n\n", $row[1], $row[2]);
-//         $counter = $counter + 1;
-//   }
-//   $result -> free_result();
-//   echo "\n$counter\n";
-// }
-?>
-
 <div class="container" id="main-content">
-	<h2>Welcome to Workify!</h2>
+	<h2>All postings</h2>
 
-	<table>
+	<table class="table table-striped">
         <thead>
             <tr>
-                <td>JID</td>
-                <td>Job Title</td>
-                <td>Organization</td>
-                <td>Division</td>
-                <td>Position Type</td>
-                <td>Internal Status</td>
-                <td>App Deadline</td>
-                <td>Description</td>
+                <th scope="col">JID</th>
+                <th scope="col">Job Title</th>
+                <th scope="col">Organization</th>
+                <th scope="col">Division</th>
+                <th scope="col">Position Type</th>
+                <th scope="col">Internal Status</th>
+                <th scope="col">App Deadline</th>
+                <!-- <th scope="col">Description</td> -->
             </tr>
         </thead>
         <tbody>
@@ -88,7 +75,7 @@
                     <td><?php echo $row[4]?></td>
                     <td><?php echo $row[5]?></td>
                     <td><?php echo $row[6]?></td>
-                    <td><?php echo $row[7]?></td>
+                    <!-- <td><?php echo $row[7]?></td> -->
                 </tr>
 
             <?php

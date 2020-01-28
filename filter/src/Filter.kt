@@ -32,11 +32,9 @@ fun main() {
         }
     }
 
-    /* generate filtered-jobs.txt
-    jobs.forEach {
-        println(it.ID.toString() + "|" + it.JobTitle + "|" + it.Organization + "|" + it.Division + "|" + it.PositionType + "|" + it.InternalStatus + "|" + it.AppDeadline)
-    }
-    */
+//    jobs.forEach {
+//        println(it.ID.toString() + "\t" + it.JobTitle + "\t" + it.Organization + "\t" + it.Division + "\t" + it.PositionType + "\t" + it.InternalStatus + "\t" + it.AppDeadline + "\t" + it.Description)
+//    }
 
     val companies = mutableListOf<Company>()
     jobs.forEach { job ->
@@ -45,7 +43,7 @@ fun main() {
         }
     }
     companies.forEach {
-        println(it.Organization + "|" + it.Rating)
+        println(it.Organization + "\t" + it.Rating)
     }
 }
 
@@ -56,7 +54,8 @@ data class Job(
     var Division: String = "",
     var PositionType: String = "",
     var InternalStatus: String = "",
-    var AppDeadline: String = ""
+    var AppDeadline: String = "",
+    var Description: String = "This is an awesome job."
 )
 
 data class Company(

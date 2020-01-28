@@ -1,161 +1,161 @@
-ABB|1.2
-Adracare Inc|4.3
-AirShare, Inc.|3.6
-Akora Labs Inc|3.9
-Alchem Flavors|1.8
-Altius Analytics Labs|3.7
-Angus Consulting Management Limited|0.9
-Animo Tech|6.3
-AppDirect Inc|3.4
-Apple Inc|4.5
-ArcelorMittal|3.1
-Array Marketing|1.0
-Aurora Eye Care|8.8
-Auvik Networks Inc.|0.9
-BDO Canada LLP|1.3
-BGC Engineering Inc|6.3
-BioRender|0.9
-Borrum Energy Solutions|2.4
-Brightspark Travel Inc|4.5
-Brosz Group of Companies|4.7
-Bunzl Canada|7.8
-Burlington Hydro Electric Inc|4.4
-BWX Technologies Inc|7.7
-Canadian Imperial Bank of Commerce|0.3
-CanGoChina|0.7
-Capes Engineering Ltd|0.3
-CBC/Radio-Canada|1.5
-Centric Engineering Corporation|9.3
-Centro Inc|4.3
-CGG|5.7
-Chisel AI|9.4
-Chorley & Bisset Ltd|0.5
-City of Toronto|8.4
-City of Vancouver|4.5
-Cloudworks|7.7
-Clumio|5.3
-Cognex Corporation|3.7
-ContactMonkey Inc|2.3
-Credit Valley Conservation|0.9
-David Schaeffer Engineering Ltd (DSEL)|0.6
-Dillon Consulting Limited|7.4
-Duka Property Management Inc.|3.6
-Eckler Ltd|5.5
-Educartis|1.3
-Eight Capital|2.2
-Electrans Technologies Ltd|8.8
-ENGINEERING.com|5.2
-Environmental Consulting Occupational Health|5.8
-ERA Architecture|4.5
-ETBO Tool & Die|4.2
-Faire|1.5
-fgf Brands|2.2
-Fortinet Technologies Inc|3.9
-Fortran Traffic Systems|8.7
-GeoSpectrum Technologies Inc|3.5
-Glaswal Systems Limited|6.5
-Good & Well|5.5
-Gore Mutual Insurance Company|9.2
-Government of Alberta|2.9
-Growing Hope Farm|5.5
-Haliburton Vision Care|5.4
-Health Centre Pharmacy Inc|3.0
-Hepburn Engineering Inc|3.1
-Hive.AI|2.8
-Hong Kong Exchanges and Clearing Limited|8.2
-Hutton House|3.1
-IBM Canada Limited|8.4
-Imperial|5.9
-Infinite Investment Systems Ltd|5.8
-Inscopix Inc|2.8
-iNTERFACEWARE Corporation|2.0
-International Education Services|5.4
-International Tax Solutions|2.7
-Invictus RG Pte Ltd|0.8
-iTMethods Inc|0.8
-iVenuto.com Software Corporation|7.0
-JC Golden Investment Management Inc|2.0
-Jerry Services Inc|2.0
-KPMG LLP Canada|4.4
-KW Athletics|0.4
-Layer 6 AI|3.1
-LevelJump Software Corp|3.8
-Luxsonic Technologies Inc|4.6
-Matthewwealth1308 Limited|5.9
-McKellar Structured Settlements Inc|0.7
-MD Financial Management|9.5
-Mercer|0.8
-MIXONSET Inc.|3.4
-MMMC Inc Architects|0.7
-Mobile Klinik Professional Smartphone Repair|1.0
-Morrison Hershfield Limited|2.1
-Motiva AI|4.0
-MPAC - Municipal Property Assessment Corporation|8.0
-MTE Consultants Inc|7.1
-Murphy's Pharmacies|5.7
-Nanjing Ansheng Education and Culture Exchange Co|1.9
-National Research Council Canada|3.9
-Noon Elite Recruitment|5.7
-Nurtured Life|7.5
-Omnicom Media Group|5.1
-Ontario Institute for Cancer Research|5.5
-Ontario Ministry of Government & Consumer Services|5.7
-Opener Inc|5.2
-Operis|0.3
-Oracle Corporation|2.6
-Organika|1.2
-Paymi|9.2
-PEER Group Inc|4.6
-Pentair Inc|5.0
-Pethealth Inc (A Fairfax Company)|8.4
-Petro-Canada Lubricants Inc|8.8
-PhysioFit Health & Rehab|7.8
-Pinchin Ltd|9.1
-Pleasant Solutions|3.7
-Podium Development Corp|4.5
-Poly OptoElectronics Co Ltd|4.6
-Procter & Gamble Inc Canada|4.3
-Read Jones Christoffersen Ltd|5.1
-Red Lake Margaret Cochenour Memorial Hospital|0.3
-Refinitiv Canada Holdings Ltd|8.2
-Resemble AI|8.7
-RGAX LLC|2.9
-Rogers Communications Inc|2.9
-Rothesay Signature Boutique|4.3
-SambaNova Systems|5.7
-Scales Nature Park|9.7
-Scotia Personnel Ltd|9.9
-Scotiabank|7.5
-Scribendi Inc|3.7
-SCS Consulting Group Ltd|3.2
-SkipTheDishes|5.2
-Skydio Inc|9.4
-StackAdapt|8.0
-Strathmore Landscaping Management|5.6
-Studica Limited|3.6
-Sunrise Futures, LLC|5.8
-Superior Glove Works Ltd|2.3
-Swift Medical Inc|1.3
-Tacoma Engineers Inc|7.7
-TD Bank Group|1.7
-The Jonah Group Ltd|0.3
-The Ontario Public Service|0.7
-The Workers' Compensation Board|6.3
-Therapure Biopharma Inc|6.4
-ThoughtWire Corp|0.1
-Township of South Algonquin|0.5
-Toyota Motor Manufacturing Canada Inc (TMMC)|1.2
-TransAlta Corporation|1.3
-Trusted Insight|3.8
-TSC Inc|0.3
-Ulula|2.6
-Urban Systems Ltd|0.4
-Varicent|9.9
-Vermeulens Cost Consultants|6.3
-Vyana|2.2
-Watermark Environmental|8.5
-Wayfair LLC|8.4
-Welch LLP|8.7
-Ya YA Foods Corp|4.2
-Yaar Inc|5.2
-Ziptrek Ecotours Inc|1.0
+ABB	8.2
+Adracare Inc	3.5
+AirShare, Inc.	9.3
+Akora Labs Inc	7.5
+Alchem Flavors	8.6
+Altius Analytics Labs	2.9
+Angus Consulting Management Limited	5.1
+Animo Tech	5.4
+AppDirect Inc	8.5
+Apple Inc	5.0
+ArcelorMittal	7.9
+Array Marketing	8.9
+Aurora Eye Care	9.9
+Auvik Networks Inc.	0.2
+BDO Canada LLP	7.7
+BGC Engineering Inc	4.8
+BioRender	5.5
+Borrum Energy Solutions	1.1
+Brightspark Travel Inc	4.9
+Brosz Group of Companies	6.6
+Bunzl Canada	6.2
+Burlington Hydro Electric Inc	2.3
+BWX Technologies Inc	2.1
+Canadian Imperial Bank of Commerce	1.9
+CanGoChina	5.4
+Capes Engineering Ltd	8.0
+CBC/Radio-Canada	0.6
+Centric Engineering Corporation	9.9
+Centro Inc	1.5
+CGG	6.5
+Chisel AI	9.8
+Chorley & Bisset Ltd	5.0
+City of Toronto	7.4
+City of Vancouver	0.1
+Cloudworks	7.7
+Clumio	8.5
+Cognex Corporation	7.8
+ContactMonkey Inc	9.0
+Credit Valley Conservation	1.4
+David Schaeffer Engineering Ltd (DSEL)	4.3
+Dillon Consulting Limited	7.5
+Duka Property Management Inc.	7.1
+Eckler Ltd	7.7
+Educartis	2.0
+Eight Capital	3.5
+Electrans Technologies Ltd	7.5
+ENGINEERING.com	5.9
+Environmental Consulting Occupational Health	1.8
+ERA Architecture	9.7
+ETBO Tool & Die	0.4
+Faire	6.1
+fgf Brands	8.8
+Fortinet Technologies Inc	6.3
+Fortran Traffic Systems	3.3
+GeoSpectrum Technologies Inc	8.6
+Glaswal Systems Limited	7.7
+Good & Well	2.3
+Gore Mutual Insurance Company	9.3
+Government of Alberta	5.5
+Growing Hope Farm	8.3
+Haliburton Vision Care	5.9
+Health Centre Pharmacy Inc	3.4
+Hepburn Engineering Inc	9.8
+Hive.AI	8.1
+Hong Kong Exchanges and Clearing Limited	7.0
+Hutton House	2.1
+IBM Canada Limited	6.3
+Imperial	5.8
+Infinite Investment Systems Ltd	0.1
+Inscopix Inc	1.3
+iNTERFACEWARE Corporation	0.9
+International Education Services	1.0
+International Tax Solutions	6.8
+Invictus RG Pte Ltd	0.3
+iTMethods Inc	6.2
+iVenuto.com Software Corporation	2.6
+JC Golden Investment Management Inc	8.9
+Jerry Services Inc	6.2
+KPMG LLP Canada	0.9
+KW Athletics	5.9
+Layer 6 AI	1.4
+LevelJump Software Corp	4.7
+Luxsonic Technologies Inc	7.8
+Matthewwealth1308 Limited	8.7
+McKellar Structured Settlements Inc	4.8
+MD Financial Management	7.5
+Mercer	5.1
+MIXONSET Inc.	3.7
+MMMC Inc Architects	6.7
+Mobile Klinik Professional Smartphone Repair	9.5
+Morrison Hershfield Limited	1.0
+Motiva AI	2.8
+MPAC - Municipal Property Assessment Corporation	6.5
+MTE Consultants Inc	9.5
+Murphy's Pharmacies	4.2
+Nanjing Ansheng Education and Culture Exchange Co	3.8
+National Research Council Canada	8.3
+Noon Elite Recruitment	7.6
+Nurtured Life	9.1
+Omnicom Media Group	2.8
+Ontario Institute for Cancer Research	6.5
+Ontario Ministry of Government & Consumer Services	7.8
+Opener Inc	8.8
+Operis	7.6
+Oracle Corporation	0.2
+Organika	7.7
+Paymi	8.6
+PEER Group Inc	2.6
+Pentair Inc	4.6
+Pethealth Inc (A Fairfax Company)	10.0
+Petro-Canada Lubricants Inc	9.2
+PhysioFit Health & Rehab	8.4
+Pinchin Ltd	5.3
+Pleasant Solutions	2.3
+Podium Development Corp	10.0
+Poly OptoElectronics Co Ltd	2.4
+Procter & Gamble Inc Canada	9.5
+Read Jones Christoffersen Ltd	4.7
+Red Lake Margaret Cochenour Memorial Hospital	9.6
+Refinitiv Canada Holdings Ltd	9.6
+Resemble AI	8.3
+RGAX LLC	5.9
+Rogers Communications Inc	6.6
+Rothesay Signature Boutique	1.8
+SambaNova Systems	4.3
+Scales Nature Park	7.8
+Scotia Personnel Ltd	5.9
+Scotiabank	7.4
+Scribendi Inc	1.2
+SCS Consulting Group Ltd	3.0
+SkipTheDishes	1.5
+Skydio Inc	6.1
+StackAdapt	1.9
+Strathmore Landscaping Management	0.5
+Studica Limited	9.1
+Sunrise Futures, LLC	1.8
+Superior Glove Works Ltd	7.2
+Swift Medical Inc	5.8
+Tacoma Engineers Inc	0.4
+TD Bank Group	7.4
+The Jonah Group Ltd	8.8
+The Ontario Public Service	6.4
+The Workers' Compensation Board	9.0
+Therapure Biopharma Inc	9.7
+ThoughtWire Corp	6.0
+Township of South Algonquin	3.3
+Toyota Motor Manufacturing Canada Inc (TMMC)	1.1
+TransAlta Corporation	4.0
+Trusted Insight	9.9
+TSC Inc	9.9
+Ulula	6.2
+Urban Systems Ltd	4.9
+Varicent	7.4
+Vermeulens Cost Consultants	1.3
+Vyana	9.7
+Watermark Environmental	2.9
+Wayfair LLC	4.3
+Welch LLP	4.2
+Ya YA Foods Corp	2.7
+Yaar Inc	3.9
+Ziptrek Ecotours Inc	6.8
