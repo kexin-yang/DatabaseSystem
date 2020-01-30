@@ -1,0 +1,19 @@
+Kexin Yang (K236yang)
+- Format schema and report
+- Test deploy of google cloud server
+- Participate in discussion on schema and report
+Yuchuan Wu (y625wu)
+- Participate in report writing and discussion
+- Participate in user interface design
+Yuxin Tang (y299tang)
+- Finish the structure and basic content of the report
+- Decide the user interface and how the user interacts with the website
+- Provide some functional properties of the website
+Chu Qin (c9qin)
+- Participate in discussion and writing database schema and attributes
+- Provide ideas for project and database that will be used
+Yumeng Zhang (y2388zha
+- Set up GCP App Engine and MySQL
+- Create and insert initial data into MySQL database
+- Create a basic user interface for http://cs348demo-266020.appspot.com/ using HTML and PHP
+
