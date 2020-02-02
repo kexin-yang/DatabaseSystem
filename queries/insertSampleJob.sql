@@ -1,0 +1,1 @@
+INSERT INTO Job (JID, JobTitle, Organization, Division, PositionType, InternalStatus, AppDeadline, Description) values (123456, "Software Engineer", "Apple Inc", "Divisional Office", "Full-time", "Open for Applications", "Feb 5, 2020", "Develop information systems by designing, developing, and installing software solutions.");

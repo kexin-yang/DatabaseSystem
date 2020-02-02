@@ -1,0 +1,4 @@
+CREATE TABLE Applied (
+SID int,
+JID int,
+PRIMARY KEY(SID, JID));
