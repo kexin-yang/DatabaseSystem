@@ -47,10 +47,16 @@
 		}
 		echo "<p>Connected successfully</p>";
 
-
-		// $sql = "SELECT * FROM Job"; Insert match username and password query here
+		$sql = "SELECT COUNT(*) FROM Applicant WHERE SID = ".$_POST["sid"]." AND Password = '".$_POST["password"]."'";
 
 		$result = $conn -> query($sql);
+		$row = $result->fetch_row();
+		
+		if ($row[0] == 1) {
+			echo "Login successful.";
+		} else {
+			echo "Incorrect username or password.";
+		}
 
 		$conn -> close();
 	?>

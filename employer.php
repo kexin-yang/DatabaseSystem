@@ -11,15 +11,15 @@
 
 <div class="container" id="main-content">
 	<h2>Employer Log In</h2>
-		<form action="employer-login.php">
+		<form action="employer-login.php" method="post">
 		  <div class="form-group">
 		    <label for="exampleInputId1">Organization name</label>
-		    <input type="text" class="form-control" id="exampleInputId1" aria-describedby="emailHelp" placeholder="Enter organization name">
+		    <input type="text" name="name" class="form-control" id="exampleInputId1" aria-describedby="emailHelp" placeholder="Enter organization name">
 		    <small id="emailHelp" class="form-text text-muted">We'll never share your information with anyone else.</small>
 		  </div>
 		  <div class="form-group">
 		    <label for="exampleInputPassword1">Password</label>
-		    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+		    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 		  </div>
 <!-- 		  <div class="form-check">
 		    <input type="checkbox" class="form-check-input" id="exampleCheck1">

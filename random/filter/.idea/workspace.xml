@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="832de1db-2369-4ba4-881d-81a9da3fb88d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../employer-login.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../employer-login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../employer.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../employer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../members.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../queries/createAll.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../queries/createApplicant.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../queries/createApplied.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../queries/createCompany.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../queries/createJob.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../queries/insertSampleJob.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../raw/jobs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../raw/orgs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../raw/randomstudent.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../report.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../student-login.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../student-login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../student.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../student.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1Xd6RUwWRlYt6ksDvnNZKkPqlDg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="FilterKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="filter" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="FilterKt" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/src" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.FilterKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="832de1db-2369-4ba4-881d-81a9da3fb88d" name="Default Changelist" comment="" />
+      <created>1581363615824</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581363615824</updated>
+      <workItem from="1581363618416" duration="7063000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="360" y="217" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581363680961">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="360" y="217" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1581363680961" />
+    <state width="1740" height="304" key="GridCell.Tab.0.bottom" timestamp="1581370408924">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1740" height="304" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581370408924" />
+    <state width="1740" height="304" key="GridCell.Tab.0.bottom/0.23.1792.1000@0.23.1792.1000" timestamp="1581364593257" />
+    <state width="1740" height="304" key="GridCell.Tab.0.center" timestamp="1581370408923">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1740" height="304" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581370408923" />
+    <state width="1740" height="304" key="GridCell.Tab.0.center/0.23.1792.1000@0.23.1792.1000" timestamp="1581364593256" />
+    <state width="1740" height="304" key="GridCell.Tab.0.left" timestamp="1581370408922">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1740" height="304" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581370408922" />
+    <state width="1740" height="304" key="GridCell.Tab.0.left/0.23.1792.1000@0.23.1792.1000" timestamp="1581364593256" />
+    <state width="1740" height="304" key="GridCell.Tab.0.right" timestamp="1581370408923">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1740" height="304" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581370408923" />
+    <state width="1740" height="304" key="GridCell.Tab.0.right/0.23.1792.1000@0.23.1792.1000" timestamp="1581364593256" />
+    <state x="296" y="111" key="SettingsEditor" timestamp="1581363629775">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="296" y="111" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1581363629775" />
+  </component>
+</project>

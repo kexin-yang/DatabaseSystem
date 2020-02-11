@@ -32,18 +32,22 @@ fun main() {
         }
     }
 
-//    jobs.forEach {
-//        println(it.ID.toString() + "\t" + it.JobTitle + "\t" + it.Organization + "\t" + it.Division + "\t" + it.PositionType + "\t" + it.InternalStatus + "\t" + it.AppDeadline + "\t" + it.Description)
-//    }
-
     val companies = mutableListOf<Company>()
+    val charPool : List<Char> = ('a'..'z') + ('A'..'Z') + ('0'..'9')
     jobs.forEach { job ->
         if (!companies.any { it.Organization == job.Organization }) {
-            companies.add(Company(job.Organization, Random.nextInt(1, 101) / 10.0F))
+            val pwd = (1..8)
+                .map { Random.nextInt(0, charPool.size) }
+                .map(charPool::get)
+                .joinToString("")
+
+            val location = listOf("Canada", "US", "Canada", "Europe", "Canada", "Canada", "US")
+
+            companies.add(Company(job.Organization, Random.nextInt(1, 101) / 10.0F, pwd, location.random()))
         }
     }
     companies.forEach {
-        println(it.Organization + "\t" + it.Rating)
+        println(it.Organization + "\t" + it.Rating + "\t" + it.Password + "\t" + it.Location)
     }
 }
 
@@ -60,7 +64,9 @@ data class Job(
 
 data class Company(
     var Organization: String = "",
-    var Rating: Float = 0.0F
+    var Rating: Float = 0.0F,
+    var Password: String = "",
+    var Location: String = ""
 //    var Password: String = "Password",
 //    var Country: String = "Canada"
 )

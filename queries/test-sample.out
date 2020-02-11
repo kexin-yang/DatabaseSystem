@@ -1,0 +1,56 @@
++----------+
+| COUNT(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.03 sec)
++----------+
+| COUNT(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.04 sec)
++--------+---------------------------------+---------------+-----------------------+--------------+-----------------------+--------------+-------------------------+
+| JID    | JobTitle                        | Organization  | Division              | PositionType | InternalStatus        | AppDeadline  | Description             |
++--------+---------------------------------+---------------+-----------------------+--------------+-----------------------+--------------+-------------------------+
+| 151320 | Process Engineering Coordinator | ArcelorMittal | ArcelorMittal Dofasco | Full-time    | Open for Applications | Jan 31, 2020 | This is an awesome job. |
+| 151322 | Asset Engineering Coordinator   | ArcelorMittal | ArcelorMittal Dofasco | Full-time    | Open for Applications | Jan 31, 2020 | This is an awesome job. |
++--------+---------------------------------+---------------+-----------------------+--------------+-----------------------+--------------+-------------------------+
+2 rows in set (0.03 sec)
++--------+----------------------------------------------------+----------------------------------+-----------------------+--------------+-----------------------+--------------+------------------------------
+------------------------------------------------------------+
+| JID    | JobTitle                                           | Organization                     | Division              | PositionType | InternalStatus        | AppDeadline  | Description                  
+                                          |
++--------+----------------------------------------------------+----------------------------------+-----------------------+--------------+-----------------------+--------------+------------------------------
+------------------------------------------------------------+
+| 123456 | Software Engineer                                  | Apple Inc                        | Divisional Office     | Full-time    | Open for Applications | Feb 5, 2020  | Develop information systems b
+y designing, developing, and installing software solutions. |
+| 148761 | Fitness Facilitator                                | Hutton House                     | Divisional Office     | Full-time    | Open for Applications | Jan 27, 2020 | This is an awesome job.      
+                                                      |
+| 150093 | Autonomy Engineer                                  | Skydio Inc                       | Corporate Head Office | Full-time    | Open for Applications | Jan 29, 2020 | This is an awesome job.      
+                                                      |
+| 150094 | Autonomy Engineer - Robot UX                       | Skydio Inc                       | Corporate Head Office | Full-time    | Open for Applications | Jan 29, 2020 | This is an awesome job.      
+                                                      |
+| 150095 | Software Engineer - Platform                       | Skydio Inc                       | Corporate Head Office | Full-time    | Open for Applications | Jan 29, 2020 | This is an awesome job.      
+                                                      |
+| 150096 | Mobile Engineer - iOS                              | Skydio Inc                       | Corporate Head Office | Full-time    | Open for Applications | Jan 29, 2020 | This is an awesome job.      
+                                                      |
+| 150097 | Mobile Engineer - Android                          | Skydio Inc                       | Corporate Head Office | Full-time    | Open for Applications | Jan 29, 2020 | This is an awesome job.      
+                                                      |
+| 150829 | Autonomy Engineer - Computer Vision                | Skydio Inc                       | Corporate Head Office | Full-time    | Open for Applications | Jan 29, 2020 | This is an awesome job.      
+                                                      |
+| 150832 | Autonomy Engineer - Planning/Controls              | Skydio Inc                       | Corporate Head Office | Full-time    | Open for Applications | Jan 29, 2020 | This is an awesome job.      
+                                                      |
+| 151422 | Software Engineer                                  | ThoughtWire Corp                 | Head Office           | Full-time    | Open for Applications | Jan 31, 2020 | This is an awesome job.      
+                                                      |
+| 151897 | RF - Regulatory Hardware Engineer                  | Apple Inc                        | Corporate Head Office | Full-time    | Open for Applications | Feb 5, 2020  | This is an awesome job.      
+                                                      |
+| 152267 | Pharmaceutical English Teacher in Tokyo (May 2020) | International Education Services | Administration Office | Full-time    | Open for Applications | Feb 10, 2020 | This is an awesome job.      
+                                                      |
++--------+----------------------------------------------------+----------------------------------+-----------------------+--------------+-----------------------+--------------+------------------------------
+------------------------------------------------------------+
+12 rows in set (0.03 sec)
+Query OK, 1 row affected (0.05 sec)
+Query OK, 1 row affected (0.04 sec)
+Query OK, 1 row affected (0.04 sec)
+Query OK, 1 row affected (0.04 sec)
