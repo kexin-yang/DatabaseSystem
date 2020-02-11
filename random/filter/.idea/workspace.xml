@@ -3,20 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="832de1db-2369-4ba4-881d-81a9da3fb88d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../employer-login.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../employer-login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../employer.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../employer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../members.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../queries/createAll.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../queries/createApplicant.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../queries/createApplied.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../queries/createCompany.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../queries/createJob.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../queries/insertSampleJob.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../raw/jobs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../raw/orgs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../raw/randomstudent.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../report.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../student-login.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../student-login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../student.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../student.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../queries/test-sample.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../queries/test-sample.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../queries/test-sample.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../queries/test-sample.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581363615824</updated>
-      <workItem from="1581363618416" duration="7063000" />
+      <workItem from="1581363618416" duration="7239000" />
     </task>
     <servers />
   </component>

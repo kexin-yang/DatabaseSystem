@@ -13,6 +13,21 @@ FROM Job, Company
 WHERE Job.Organization = Company.Name
 AND Company.Rating > 9.5;
 
+# Find the name of a student
+SELECT Name FROM Applicant WHERE SID = 71264089;
+
+# Find all applicants who applied for a job
+SELECT Applicant.SID, Applicant.Name, Applicant.Major, Applicant.Password, Applicant.ContactInformation
+FROM Applied, Applicant
+WHERE Applied.SID = Applicant.SID
+AND Applied.JID = 151034;
+
+# Find the number of applicants for a job
+SELECT COUNT(*)
+FROM Applied, Applicant
+WHERE Applied.SID = Applicant.SID
+AND Applied.JID = 151034;
+
 # Apply for a job
 INSERT INTO Applied (SID, JID) values (18097676, 150554);
 
@@ -24,3 +39,6 @@ INSERT INTO Company (Name, Rating, Password, Location) values ("McDonalds", 9.9,
 
 # Register new applicant (student)
 INSERT INTO Applicant (SID, Name, Major, Password, ContactInformation) values (00000001, "Natasha Denona", "Arts", "password", "natasha.denona@gmail.com");
+
+# Delete a job
+DELETE FROM Job WHERE JID = 666666;

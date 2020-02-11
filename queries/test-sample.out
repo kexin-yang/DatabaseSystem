@@ -1,15 +1,20 @@
+mysql> SELECT COUNT(*) FROM Company WHERE Name = 'Altius Analytics Labs' AND Password = 'BcX0tyP5';
 +----------+
 | COUNT(*) |
 +----------+
 |        1 |
 +----------+
 1 row in set (0.03 sec)
+
+mysql> SELECT COUNT(*) FROM Applicant WHERE SID = 71264089 AND Password = 'NDNZCaTk';
 +----------+
 | COUNT(*) |
 +----------+
 |        1 |
 +----------+
 1 row in set (0.04 sec)
+
+mysql> SELECT * FROM Job WHERE Organization = 'ArcelorMittal';
 +--------+---------------------------------+---------------+-----------------------+--------------+-----------------------+--------------+-------------------------+
 | JID    | JobTitle                        | Organization  | Division              | PositionType | InternalStatus        | AppDeadline  | Description             |
 +--------+---------------------------------+---------------+-----------------------+--------------+-----------------------+--------------+-------------------------+
@@ -17,6 +22,11 @@
 | 151322 | Asset Engineering Coordinator   | ArcelorMittal | ArcelorMittal Dofasco | Full-time    | Open for Applications | Jan 31, 2020 | This is an awesome job. |
 +--------+---------------------------------+---------------+-----------------------+--------------+-----------------------+--------------+-------------------------+
 2 rows in set (0.03 sec)
+
+mysql> SELECT JID, JobTitle, Organization, Division, PositionType, InternalStatus, AppDeadline, Description
+    -> FROM Job, Company
+    -> WHERE Job.Organization = Company.Name
+    -> AND Company.Rating > 9.5;
 +--------+----------------------------------------------------+----------------------------------+-----------------------+--------------+-----------------------+--------------+------------------------------
 ------------------------------------------------------------+
 | JID    | JobTitle                                           | Organization                     | Division              | PositionType | InternalStatus        | AppDeadline  | Description                  
@@ -50,7 +60,49 @@ y designing, developing, and installing software solutions. |
 +--------+----------------------------------------------------+----------------------------------+-----------------------+--------------+-----------------------+--------------+------------------------------
 ------------------------------------------------------------+
 12 rows in set (0.03 sec)
+
+mysql> SELECT Name FROM Applicant WHERE SID = 71264089;
++------------------+
+| Name             |
++------------------+
+| Farrah Stevenson |
++------------------+
+1 row in set (0.03 sec)
+
+mysql> SELECT Applicant.SID, Applicant.Name, Applicant.Major, Applicant.Password, Applicant.ContactInformation
+    ->FROM Applied, Applicant
+    ->WHERE Applied.SID = Applicant.SID
+    ->AND Applied.JID = 151034;
++----------+---------------+------------+----------+--------------------+
+| SID      | Name          | Major      | Password | ContactInformation |
++----------+---------------+------------+----------+--------------------+
+| 41971371 | Fintan Davis  | Aviation   | T7HcneDk | retoh@comcast.net  |
+| 87904387 | Trixie Ibarra | Accounting | xfxsKK4X | maneesh@yahoo.ca   |
++----------+---------------+------------+----------+--------------------+
+2 rows in set (0.04 sec)
+
+mysql> SELECT COUNT(*)
+    ->FROM Applied, Applicant
+    ->WHERE Applied.SID = Applicant.SID
+    ->AND Applied.JID = 151034;
++----------+
+| COUNT(*) |
++----------+
+|        2 |
++----------+
+1 row in set (0.04 sec)
+
+mysql> INSERT INTO Applied (SID, JID) values (18097676, 150554);
 Query OK, 1 row affected (0.05 sec)
+
+mysql> INSERT INTO Job (JID, JobTitle, Organization, Division, PositionType, InternalStatus, AppDeadline, Description) values (666666, "Dishwasher", "Apple Inc", "Divisional Office", "Full-time", "Open for Applications", "Feb 5, 2020", "Clean dishes.");
 Query OK, 1 row affected (0.04 sec)
+
+mysql> INSERT INTO Company (Name, Rating, Password, Location) values ("McDonalds", 9.9, "password", "Mexico");
 Query OK, 1 row affected (0.04 sec)
+
+mysql> INSERT INTO Applicant (SID, Name, Major, Password, ContactInformation) values (00000001, "Natasha Denona", "Arts", "password", "natasha.denona@gmail.com");
+Query OK, 1 row affected (0.04 sec)
+
+mysql> DELETE FROM Job WHERE JID = 666666;
 Query OK, 1 row affected (0.04 sec)
