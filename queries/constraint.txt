@@ -1,0 +1,10 @@
+Constraints for employer:
+1. Job description cannot exceed 1000 words.
+2. Employer's name must be distinct.
+3. Application deadline must be in a valid date format.
+4. 
+
+
+For students:
+1. The rating for employer must be between 0-10.
+2. Their major must be string, cannot exceed 15 words
