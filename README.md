@@ -7,7 +7,7 @@ http://cs348demo-266020.appspot.com/
 
 
 
-# For TA grading Milestone 1:
+## For TA grading Milestone 1:
 
 The folder data transformer is the code we used to scrape and create data to use in the application.
 The folder of queries contains all the SQL codes for creating tables, constraints etc. 
