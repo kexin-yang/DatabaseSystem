@@ -2,6 +2,10 @@
 
 Repo for group project for 348
 
+The website of our project:
+http://cs348demo-266020.appspot.com/
+
+
 ## JDBC-DB2 Sample code
 
 To run JDBC-DB2 sample code, run `./compile` followed by `./test.sh`.
