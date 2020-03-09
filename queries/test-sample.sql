@@ -42,3 +42,137 @@ INSERT INTO Applicant (SID, Name, Major, Password, ContactInformation) values (0
 
 # Delete a job
 DELETE FROM Job WHERE JID = 666666;
+
+# Below are newly added on Mar. 9th 2020, for Milestone 2, some relatively more complex queries。
+
+# We created a new table of student record.
+CREATE TABLE StudentRecord (
+SID int,
+JID int,
+Term int,
+StudentRating int,
+PRIMARY KEY (SID, JID, Term, Organization, StudentRating),
+FOREIGN KEY SID REFERENCES Applicant(SID),
+FOREIGN KEY JID REFERENCES Job(JID));
+
+# Order jobs by popularity
+SELECT JID, JobTitle, Organization, Division, PositionType, InternalStatus, AppDeadline, Description
+FROM Job, Company, Applied
+WHERE Job.Organization = Company.Name
+AND Job.JID = Applied.JID
+ORDER BY COUNT(Applied.SID);
+
+# Group applicants by major
+SELECT Applicant.Major
+FROM Applied, Applicant
+WHERE Applied.SID = Applicant.SID
+AND Applied.JID = 151034
+GROUP BY Applicant.Major;
+
+# Where has a student worked before?
+SELECT StudentRecord.Term, Job.Organization, StudentRecord.Rating
+FROM StudentRecord, Job
+WHERE StudentRecord.JID = Job.JID
+AND StudentRecord.SID = 18097676;
+
+# When a student is hired, delete the corresponding record in Applied
+CREATE TRIGGER DeleteApplied
+AFTER INSERT ON StudentRecord
+REFERENCING NEW ROW AS newHire
+FOR EACH ROW
+DELETE FROM Applied
+WHERE Applied.SID = newHire.SID
+AND Applied.JID = newHire.JID;
+
+                               
+# This Trigger is to remove corresponding job records in table Add when a company 
+# decides to remove a job posting
+Create Trigger removeJob1
+After Delete on Job
+Referencing Old Row as OldJob
+For Each row 
+Delete from Add 
+Where Add.JID = OldJob.JID
+
+# This Trigger is to remove corresponding job records in table Applied when a company 
+# decides to remove a job posting
+Create Trigger removeJob2
+After Delete on Job
+Referencing Old Row as OldJob
+For Each row
+Delete from Applied
+Where Applied.JID = OldJob.JID
+
+# This Trigger is to remove corresponding job records in table Job when a company 
+# decides to quit Workify and therefore remove itself from Company table, this trigger will trigger 
+# the above two triggers
+Create Trigger noCompany
+After Delete on Company
+Referencing old Rows as oldCompany
+For Each Row
+Delete from Job
+Where Job.organization = oldCompany.name
+                               
+                               
+# Select jobs with jobs whose ratings more than 9.0 and the Location of the company that offer this job is in Austin, U.S.
+SELECT * 
+FROM Job j, 
+    (SELECT *
+    FROM Company c
+    WHERE c.Name = j.CompanyName) AS CJ
+WHERE j.ratings > 9.0 AND CJ.Location == "Austin"
+
+# If we want to select jobs from [companys] whose ratings are more than 9.0, and the application deadline is later than Apr. 1st, 2020 
+SELECT * 
+FROM Job j, 
+    (SELECT * 
+    FROM Company c
+    WHERE c.Name == j.CompanyName) AS CJ
+WHERE j.AppDeadline >= 1585699200 AND CJ.rating > 9.0
+
+#filter job by ratings
+SELECT *
+FROM Job
+ORDER BY Rating ASC|DESC
+
+                               
+1. Print pairs of applicants and company applied before time t sorted by company name ascending order
+
+SELECT Applicant.Name, Company.Name
+FROM Applicant, Company, Applied, Job
+WHERE Applid.AppliedDate < t AND
+            Applied.SID = Applicant.SID AND
+            Applied.JID = Job.JID AND
+            Job.Organization = Company.Name
+ORDER BY Company.Name asc;
+
+2. Print list of names of students who applied to 'Apple' but not 'Huawei' sorted by ascending name order
+
+SELECT Applicant.Name
+FROM  Applicant
+WHERE Applicant.SID in ( SELECT SID
+                                        FROM Applied, Job
+                                        WHERE Applied.JID = Job.JID AND
+                                                    Job.Organization = 'Apple'
+                                       EXCEPT
+                                        SELECT SID
+                                        FROM Applied, Job
+                                        WHERE Applied.JID = Job.JID AND
+                                                    Job.Organization = 'Huawei'
+                                          )
+ORDER BY Applicant.Name asc;
+
+3.Print the number of applicants who applied to more than 5 jobs
+
+SELECT COUNT(*) FROM
+           (SELECT Applicant.Name
+             FROM Applicant, Applied
+             WHERE Applicant.SID IN (
+                          SELECT SID
+                          FROM Applied a
+                          GROUP BY a.SID
+                          HAVING COUNT(a.JID) > 5)
+            )
+
+
+
