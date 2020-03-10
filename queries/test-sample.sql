@@ -45,16 +45,6 @@ DELETE FROM Job WHERE JID = 666666;
 
 # Below are newly added on Mar. 9th 2020, for Milestone 2, some relatively more complex queries。
 
-# We created a new table of student record.
-CREATE TABLE StudentRecord (
-SID int,
-JID int,
-Term int,
-StudentRating int,
-PRIMARY KEY (SID, JID, Term, Organization, StudentRating),
-FOREIGN KEY SID REFERENCES Applicant(SID),
-FOREIGN KEY JID REFERENCES Job(JID));
-
 # Order jobs by popularity
 SELECT JID, JobTitle, Organization, Division, PositionType, InternalStatus, AppDeadline, Description
 FROM Job, Company, Applied
@@ -84,16 +74,6 @@ DELETE FROM Applied
 WHERE Applied.SID = newHire.SID
 AND Applied.JID = newHire.JID;
 
-                               
-# This Trigger is to remove corresponding job records in table Add when a company 
-# decides to remove a job posting
-Create Trigger removeJob1
-After Delete on Job
-Referencing Old Row as OldJob
-For Each row 
-Delete from Add 
-Where Add.JID = OldJob.JID
-
 # This Trigger is to remove corresponding job records in table Applied when a company 
 # decides to remove a job posting
 Create Trigger removeJob2
@@ -101,7 +81,7 @@ After Delete on Job
 Referencing Old Row as OldJob
 For Each row
 Delete from Applied
-Where Applied.JID = OldJob.JID
+Where Applied.JID = OldJob.JID;
 
 # This Trigger is to remove corresponding job records in table Job when a company 
 # decides to quit Workify and therefore remove itself from Company table, this trigger will trigger 
@@ -111,16 +91,15 @@ After Delete on Company
 Referencing old Rows as oldCompany
 For Each Row
 Delete from Job
-Where Job.organization = oldCompany.name
-                               
-                               
+Where Job.organization = oldCompany.name;
+                                                          
 # Select jobs with jobs whose ratings more than 9.0 and the Location of the company that offer this job is in Austin, U.S.
 SELECT * 
 FROM Job j, 
     (SELECT *
     FROM Company c
     WHERE c.Name = j.CompanyName) AS CJ
-WHERE j.ratings > 9.0 AND CJ.Location == "Austin"
+WHERE j.Rating > 9.0 AND CJ.Location == "Austin";
 
 # If we want to select jobs from [companys] whose ratings are more than 9.0, and the application deadline is later than Apr. 1st, 2020 
 SELECT * 
@@ -128,16 +107,14 @@ FROM Job j,
     (SELECT * 
     FROM Company c
     WHERE c.Name == j.CompanyName) AS CJ
-WHERE j.AppDeadline >= 1585699200 AND CJ.rating > 9.0
+WHERE j.AppDeadline >= 1585699200 AND CJ.Rating > 9.0;
 
-#filter job by ratings
+# Sort job by ratings
 SELECT *
 FROM Job
-ORDER BY Rating ASC|DESC
-
+ORDER BY Rating DESC;
                                
 # Print pairs of applicants and company applied before time t sorted by company name ascending order
-
 SELECT Applicant.Name, Company.Name
 FROM Applicant, Company, Applied, Job
 WHERE Applid.AppliedDate < t AND
@@ -147,7 +124,6 @@ WHERE Applid.AppliedDate < t AND
 ORDER BY Company.Name asc;
 
 # Print list of names of students who applied to 'Apple' but not 'Huawei' sorted by ascending name order
-
 SELECT Applicant.Name
 FROM  Applicant
 WHERE Applicant.SID in 
@@ -162,10 +138,8 @@ WHERE Applied.JID = Job.JID AND
         Job.Organization = 'Huawei'
 )
 ORDER BY Applicant.Name asc;
-
                                
 #Print the number of applicants who applied to more than 5 jobs
-
 SELECT COUNT(*) FROM
            (SELECT Applicant.Name
              FROM Applicant, Applied
@@ -174,11 +148,10 @@ SELECT COUNT(*) FROM
                           FROM Applied a
                           GROUP BY a.SID
                           HAVING COUNT(a.JID) > 5)
-            )
+            );
 
 #print the company names and their locations of the companies that offers ' 'developer" job titles but not "writer''. The outputs are sorted by the name of
 #the companies in ascending order.
-
 SELECT name, location
 FROM company
 WHERE name IN (SELECT name
@@ -187,34 +160,29 @@ WHERE Job Title LIKE" % developer"
 EXCEPT
 SELET name
 FROM Job
-WHERE. Job Title LIKE" % writer %")ORDER By name in ASC
-                               
-                               
+WHERE. Job Title LIKE" % writer %")ORDER BY name in ASC;
+                                                              
 #For company A, print a list of Job titles, add date.
 #and its corresponding applicants size
 #sorted by the job title in ascending order. Note that it is
 #possible that some Jobs don't have any applicants, the
 #output should give a count of 0）
-
 SELECT CS. Job Title, a. Add Date, CS. J size
 FROM add, 
 (SELECT J. Job Title, J. JID, count (Ap. SID) AS J size
 FROM Job J
 LEFT OUTER JOIN Applied Ap
-ON J. JID = Ap.JID & J. organization=' 'A"
+ON J. JID = Ap.JID & J. organization="A"
 Group By JID) AS CS
 WHERE JID = CS. JID
-ORDER BY CS. Job Title in ASC.
-
-                               
+ORDER BY CS. Job Title in ASC;
+                              
 #For Company A, print a list of Tips and their corresponding
-#job titles that haven't been applied by anyone yet.
-                               
+#job titles that haven't been applied by anyone yet.                               
 SELECT JID. Job Title
 FROM Job
-WHERE organization = ' 'A'
+WHERE organization = "A"
 EXCEPT
 SELECT J. JID, J. Job Title
 FROM Job J, applied Ap
-WHERE J. JID = AP.JID & J. organization = ' 'A''.
-
+WHERE J. JID = AP.JID & J. organization = "A";

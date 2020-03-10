@@ -1,4 +1,7 @@
-<?php include("includes/a_config.php");?>
+<?php 
+	include("includes/a_config.php");
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,9 +17,6 @@
 	<div class="container">
 		<!-- todo: welcome, student name -->
 		<?php
-			session_start();
-			
-			require __DIR__ . '/vendor/autoload.php';
 			require __DIR__ . '/env.php';
 
 			use Google\Cloud\Storage\StorageClient;
@@ -54,8 +54,6 @@
 	        <div class="col-xs-1 col-md-1"></div>
 
 	        <div class="col-xs-12 col-md-8">
-            	<h3>Your postings</h3>
-
 				<table class="table table-striped">
 			    <thead>
 			        <tr>

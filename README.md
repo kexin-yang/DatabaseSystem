@@ -6,21 +6,27 @@ The website of our project:
 http://cs348demo-266020.appspot.com/
 
 
-
-## For TA grading Milestone 1:
+## For TA grading Milestone 2:
 
 The folder data transformer is the code we used to scrape and create data to use in the application.
 The folder of queries contains all the SQL codes for creating tables, constraints etc. 
 
+## Implemented Features
+- Student login: /student.php
+- Employer login: /employer.php
+- Student 
+    - apply: /student-login.php
+    - filter for jobs: /student-login.php
+- Employer
+    - post: /employer-login.php
 
-
-
-## JDBC-DB2 Sample code
-
-To run JDBC-DB2 sample code, run `./compile` followed by `./test.sh`.
 
 ## How to create and load sample database
 
+### Data source
+
+- Our data is scraped from Waterloo Works: https://waterlooworks.uwaterloo.ca/
+- The code that extracts and transforms the production dataset is located in /DataTransformer
 
 ### Preparing data
 
@@ -51,6 +57,7 @@ mysql > USE Workify;
 ```
 mysql > source populateJobs.sql;
 ```
+
 
 ## Schema
  

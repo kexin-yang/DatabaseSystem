@@ -1,4 +1,7 @@
-<?php include("includes/a_config.php");?>
+<?php 
+	include("includes/a_config.php");
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,9 +13,6 @@
 <?php include("includes/navigation.php");?>
 
 <?php
-	session_start();
-
-	require __DIR__ . '/vendor/autoload.php';
 	require __DIR__ . '/env.php';
 
 	use Google\Cloud\Storage\StorageClient;

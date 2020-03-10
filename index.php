@@ -27,7 +27,6 @@
         </thead>
         <tbody>
         <?php
-            require __DIR__ . '/vendor/autoload.php';
 			require __DIR__ . '/env.php';
 
 			use Google\Cloud\Storage\StorageClient;
