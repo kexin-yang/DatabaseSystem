@@ -136,7 +136,7 @@ FROM Job
 ORDER BY Rating ASC|DESC
 
                                
-1. Print pairs of applicants and company applied before time t sorted by company name ascending order
+# Print pairs of applicants and company applied before time t sorted by company name ascending order
 
 SELECT Applicant.Name, Company.Name
 FROM Applicant, Company, Applied, Job
@@ -146,23 +146,25 @@ WHERE Applid.AppliedDate < t AND
             Job.Organization = Company.Name
 ORDER BY Company.Name asc;
 
-2. Print list of names of students who applied to 'Apple' but not 'Huawei' sorted by ascending name order
+# Print list of names of students who applied to 'Apple' but not 'Huawei' sorted by ascending name order
 
 SELECT Applicant.Name
 FROM  Applicant
-WHERE Applicant.SID in ( SELECT SID
-                                        FROM Applied, Job
-                                        WHERE Applied.JID = Job.JID AND
-                                                    Job.Organization = 'Apple'
-                                       EXCEPT
-                                        SELECT SID
-                                        FROM Applied, Job
-                                        WHERE Applied.JID = Job.JID AND
-                                                    Job.Organization = 'Huawei'
-                                          )
+WHERE Applicant.SID in 
+(SELECT SID
+FROM Applied, Job
+WHERE Applied.JID = Job.JID AND
+        Job.Organization = 'Apple'
+EXCEPT
+SELECT SID
+FROM Applied, Job
+WHERE Applied.JID = Job.JID AND
+        Job.Organization = 'Huawei'
+)
 ORDER BY Applicant.Name asc;
 
-3.Print the number of applicants who applied to more than 5 jobs
+                               
+#Print the number of applicants who applied to more than 5 jobs
 
 SELECT COUNT(*) FROM
            (SELECT Applicant.Name
@@ -174,5 +176,45 @@ SELECT COUNT(*) FROM
                           HAVING COUNT(a.JID) > 5)
             )
 
+#print the company names and their locations of the companies that offers ' 'developer" job titles but not "writer''. The outputs are sorted by the name of
+#the companies in ascending order.
 
+SELECT name, location
+FROM company
+WHERE name IN (SELECT name
+FROM Job
+WHERE Job Title LIKE" % developer"
+EXCEPT
+SELET name
+FROM Job
+WHERE. Job Title LIKE" % writer %")ORDER By name in ASC
+                               
+                               
+#For company A, print a list of Job titles, add date.
+#and its corresponding applicants size
+#sorted by the job title in ascending order. Note that it is
+#possible that some Jobs don't have any applicants, the
+#output should give a count of 0）
+
+SELECT CS. Job Title, a. Add Date, CS. J size
+FROM add, 
+(SELECT J. Job Title, J. JID, count (Ap. SID) AS J size
+FROM Job J
+LEFT OUTER JOIN Applied Ap
+ON J. JID = Ap.JID & J. organization=' 'A"
+Group By JID) AS CS
+WHERE JID = CS. JID
+ORDER BY CS. Job Title in ASC.
+
+                               
+#For Company A, print a list of Tips and their corresponding
+#job titles that haven't been applied by anyone yet.
+                               
+SELECT JID. Job Title
+FROM Job
+WHERE organization = ' 'A'
+EXCEPT
+SELECT J. JID, J. Job Title
+FROM Job J, applied Ap
+WHERE J. JID = AP.JID & J. organization = ' 'A''.
 
