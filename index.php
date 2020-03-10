@@ -83,7 +83,6 @@
             </table>
 </div>
 
-<?php $conn -> close(); ?>
 <?php include("includes/footer.php");?>
 
 </body>

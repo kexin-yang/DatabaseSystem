@@ -81,48 +81,98 @@
 	        <div class="col-xs-1 col-md-1"></div>
 
 	        <div class="col-xs-12 col-md-8">
-            	<h3>Your postings</h3>
 
-				<table class="table table-striped">
-			    <thead>
-			        <tr>
-			            <th scope="col">JID</th>
-			            <th scope="col">Job Title</th>
-			            <th scope="col">Division</th>
-			            <th scope="col">Position Type</th>
-			            <th scope="col">Internal Status</th>
-			            <th scope="col">App Deadline</th>
-			            <!-- <th scope="col">Description</td> Hiding description for now because it is too long -->
-			        </tr>
-			    </thead>
-			    <tbody>
-			    <?php
-					$job_sql = "SELECT * FROM Job WHERE Organization = '".$_SESSION['name']."'";
-					$job_result = $conn -> query($job_sql);
-					
-			        while($job_row = $job_result->fetch_row()) {
-				?>
-			    <tr>
-			        <td><?php echo $job_row[0]?></td>
-			        <td><?php echo $job_row[1]?></td>
-			        <td><?php echo $job_row[3]?></td>
-			        <td><?php echo $job_row[4]?></td>
-			        <td><?php echo $job_row[5]?></td>
-			        <td><?php echo $job_row[6]?></td>
-			    </tr>
+	        	<nav>
+				  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+				    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Your Postings</a>
+				    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Your Applicants</a>
+				  </div>
+				</nav>
 
-				<?php
-					}
-			    	$conn -> close();
-			    ?>
-			    </tbody>
-			    </table>
+				<div class="tab-content" id="nav-tabContent">
+				  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+					<table class="table table-striped">
+				    <thead>
+				        <tr>
+				            <th scope="col">JID</th>
+				            <th scope="col">Job Title</th>
+				            <th scope="col">Division</th>
+				            <th scope="col">Position Type</th>
+				            <th scope="col">Internal Status</th>
+				            <th scope="col">App Deadline</th>
+				            <th scope="col"> </th>
+				            <th scope="col"> </th>
+				            <!-- <th scope="col">Description</td> Hiding description for now because it is too long -->
+				        </tr>
+				    </thead>
+				    <tbody>
+				    <?php
+						$job_sql = "SELECT * FROM Job WHERE Organization = '".$_SESSION['name']."'";
+						$job_result = $conn -> query($job_sql);
+						
+				        while($job_row = $job_result->fetch_row()) {
+					?>
+				    <tr>
+				        <td><?php echo $job_row[0]?></td>
+				        <td><?php echo $job_row[1]?></td>
+				        <td><?php echo $job_row[3]?></td>
+				        <td><?php echo $job_row[4]?></td>
+				        <td><?php echo $job_row[5]?></td>
+				        <td><?php echo $job_row[6]?></td>
+				        <td>
+				        	<button type="button" class="btn btn-primary">Details</button>
+				        </td>
+				        <td>
+				        	<button type="button" class="btn btn-danger">Delete</button>
+				        </td>
+				    </tr>
+
+					<?php
+						}
+				    ?>
+				    </tbody>
+				    </table>
+				  </div>
+				  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+				  	<table class="table table-striped">
+				    <thead>
+				        <tr>
+				            <th scope="col">Name</th>
+				            <th scope="col">Major</th>
+				            <th scope="col">Contact Info</th>
+				            <th scope="col">Job Applied</th>
+				        </tr>
+				    </thead>
+				    <tbody>
+				    <?php
+						$students_sql = "SELECT DISTINCT Applicant.Name, Applicant.Major, Applicant.ContactInformation, Job.JobTitle FROM Applied, Applicant, Job WHERE Applied.SID = Applicant.SID AND Applied.JID = Job.JID AND Job.Organization = '".$_SESSION['name']."' ORDER BY Job.JobTitle";
+						$students_result = $conn -> query($students_sql);
+						
+				        while($students_row = $students_result->fetch_row()) {
+					?>
+				    <tr>
+				        <td><?php echo $students_row[0]?></td>
+				        <td><?php echo $students_row[1]?></td>
+				        <td><?php echo $students_row[2]?></td>
+				        <td><?php echo $students_row[3]?></td>
+				    </tr>
+
+					<?php
+						}
+				    ?>
+				    </tbody>
+				    </table>
+				  </div>
+				</div>
 	        </div>
 	    </div>
 	</div>
 </div>
 
-<?php include("includes/footer.php");?>
+<?php 
+	$conn -> close();
+	include("includes/footer.php");
+?>
 
 </body>
 </html>

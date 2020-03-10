@@ -11,7 +11,7 @@ http://cs348demo-266020.appspot.com/
 The folder data transformer is the code we used to scrape and create data to use in the application.
 The folder of queries contains all the SQL codes for creating tables, constraints etc. 
 
-## Implemented Features
+## Features
 - Student login: /student.php
 - Employer login: /employer.php
 - Student 
@@ -19,6 +19,7 @@ The folder of queries contains all the SQL codes for creating tables, constraint
     - filter for jobs: /student-login.php
 - Employer
     - post: /employer-login.php
+    - view applicant info: /employer-login.php
 
 
 ## How to create and load sample database

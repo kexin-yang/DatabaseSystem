@@ -17,7 +17,7 @@ AND Company.Rating > 9.5;
 SELECT Name FROM Applicant WHERE SID = 71264089;
 
 # Find all applicants who applied for a job
-SELECT Applicant.SID, Applicant.Name, Applicant.Major, Applicant.Password, Applicant.ContactInformation
+SELECT Applicant.Name, Applicant.Major, Applicant.ContactInformation
 FROM Applied, Applicant
 WHERE Applied.SID = Applicant.SID
 AND Applied.JID = 151034;
@@ -64,6 +64,12 @@ SELECT StudentRecord.Term, Job.Organization, StudentRecord.Rating
 FROM StudentRecord, Job
 WHERE StudentRecord.JID = Job.JID
 AND StudentRecord.SID = 18097676;
+
+# Find all applicants who applied for a job
+SELECT Applicant.Name, Applicant.Major, Applicant.ContactInformation
+FROM Applied, Applicant
+WHERE Applied.SID = Applicant.SID
+AND Applied.JID = 151034;
 
 # When a student is hired, delete the corresponding record in Applied
 CREATE TRIGGER DeleteApplied
@@ -160,7 +166,7 @@ WHERE Job Title LIKE" % developer"
 EXCEPT
 SELET name
 FROM Job
-WHERE. Job Title LIKE" % writer %")ORDER BY name in ASC;
+WHERE Job.JobTitle LIKE" % writer %")ORDER BY name in ASC;
                                                               
 #For company A, print a list of Job titles, add date.
 #and its corresponding applicants size
@@ -179,10 +185,25 @@ ORDER BY CS. Job Title in ASC;
                               
 #For Company A, print a list of Tips and their corresponding
 #job titles that haven't been applied by anyone yet.                               
-SELECT JID. Job Title
+SELECT JID.Job Title
 FROM Job
 WHERE organization = "A"
 EXCEPT
-SELECT J. JID, J. Job Title
-FROM Job J, applied Ap
-WHERE J. JID = AP.JID & J. organization = "A";
+SELECT J.JID, J.JobTitle
+FROM Job J, Applied Ap
+WHERE J.JID = AP.JID & J.Organization = "A";
+
+# Find all applicants who applied for a job order by rating from past employers
+SELECT Applicant.Name, Applicant.Major, Applicant.ContactInformation, AVG(StudentRecord.Rating)
+FROM Applied, Applicant, StudentRecord
+WHERE Applied.SID = Applicant.SID
+AND Applied.JID = 151034
+ORDER BY AVG(StudentRecord.Rating);
+
+# Find all applicants who applied for a company
+SELECT DISTINCT Applicant.Name, Applicant.Major, Applicant.ContactInformation
+FROM Applied, Applicant, Job
+WHERE Applied.SID = Applicant.SID
+AND Applied.JID = Job.JID
+AND Job.Organization = "Apple"
+ORDER BY Job.JobTitle;

@@ -1,3 +1,4 @@
+McDonalds	6.9	password	Canada
 ABB	6.9	uIArbXCL	Canada
 Adracare Inc	4.4	NJxxIFqf	US
 AirShare, Inc.	0.6	PWjLfNVo	US

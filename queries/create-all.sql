@@ -5,7 +5,7 @@ Organization VARCHAR(255),
 Division VARCHAR(255),
 PositionType VARCHAR(255),
 InternalStatus VARCHAR(255),
-AppDeadline int,
+AppDeadline int, # Need to update in mysql
 Description VARCHAR(255),
 PRIMARY KEY(JID),
 FOREIGN KEY Organization REFERENCES Company(Name));
@@ -23,25 +23,15 @@ Name VARCHAR(255),
 Major VARCHAR(255),
 Password VARCHAR(255),
 ContactInformation VARCHAR(255),
-Term int,
 PRIMARY KEY(SID));
 
 CREATE TABLE Applied (
 SID int,
 JID int,
-AppliedDate int,
+AppliedDate int, # Need to update in mysql
 PRIMARY KEY(SID, JID),
-FOREIGN KEY SID REFERENCES Applicant(SID),
-FOREIGN KEY JID REFERENCES Job(JID));
-
-CREATE TABLE StudentRecord (
-SID int,
-JID int,
-Term int,
-StudentRating int,
-PRIMARY KEY (SID, Term),
-FOREIGN KEY SID REFERENCES Applicant(SID),
-FOREIGN KEY JID REFERENCES Job(JID));
+FOREIGN KEY (SID) REFERENCES Applicant(SID),
+FOREIGN KEY (JID) REFERENCES Job(JID));
 
 # Below are newly added on Mar. 9th 2020, for Milestone 2, some relatively more complex queries。
 
@@ -51,6 +41,6 @@ SID int,
 JID int,
 Term int,
 StudentRating int,
-PRIMARY KEY (SID, JID, Term, Organization, StudentRating),
-FOREIGN KEY SID REFERENCES Applicant(SID),
-FOREIGN KEY JID REFERENCES Job(JID));
+PRIMARY KEY (SID, Term),
+FOREIGN KEY (SID) REFERENCES Applicant(SID),
+FOREIGN KEY (JID) REFERENCES Job(JID));
