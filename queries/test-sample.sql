@@ -43,7 +43,7 @@ INSERT INTO Applicant (SID, Name, Major, Password, ContactInformation) values (0
 # Delete a job
 DELETE FROM Job WHERE JID = 666666;
 
-# Below are newly added on Mar. 9th 2020, for Milestone 2, some relatively more complex queries。
+# Below are newly added on Mar. 9th 2020, for Milestone 2, some relatively more complex queries
 
 # Order jobs by popularity
 SELECT JID, JobTitle, Organization, Division, PositionType, InternalStatus, AppDeadline, Description
@@ -172,26 +172,26 @@ WHERE Job.JobTitle LIKE" % writer %")ORDER BY name in ASC;
 #and its corresponding applicants size
 #sorted by the job title in ascending order. Note that it is
 #possible that some Jobs don't have any applicants, the
-#output should give a count of 0）
-SELECT CS. Job Title, a. Add Date, CS. J size
-FROM add, 
-(SELECT J. Job Title, J. JID, count (Ap. SID) AS J size
-FROM Job J
-LEFT OUTER JOIN Applied Ap
-ON J. JID = Ap.JID & J. organization="A"
-Group By JID) AS CS
-WHERE JID = CS. JID
-ORDER BY CS. Job Title in ASC;
+#output should give a count of 0
+#SELECT CS.JobTitle, a.Add Date, CS. size
+#FROM add,
+#(SELECT J.JobTitle, J.JID, count (Ap.SID) AS Jsize
+#FROM Job J
+#LEFT OUTER JOIN Applied Ap
+#ON J.JID = Ap.JID & J.organization="A"
+#Group By JID) AS CS
+#WHERE JID = CS.JID
+#ORDER BY CS.Job Title in ASC;
                               
 #For Company A, print a list of Tips and their corresponding
 #job titles that haven't been applied by anyone yet.                               
-SELECT JID.Job Title
+SELECT Job.JID, Job.JobTitle
 FROM Job
 WHERE organization = "A"
 EXCEPT
 SELECT J.JID, J.JobTitle
 FROM Job J, Applied Ap
-WHERE J.JID = AP.JID & J.Organization = "A";
+WHERE J.JID = Ap.JID AND J.Organization = "A";
 
 # Find all applicants who applied for a job order by rating from past employers
 SELECT Applicant.Name, Applicant.Major, Applicant.ContactInformation, AVG(StudentRecord.Rating)
